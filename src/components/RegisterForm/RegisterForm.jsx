@@ -16,8 +16,8 @@ export const RegisterForm = () => {
       email: form.elements.email.value,
       password: form.elements.password.value,
     };
-    if (user.name.length === 0) {
-      return Notify.failure('Enter the Username');
+    if (user.name.length < 2) {
+      return Notify.failure('Username should be at least 2 characters');
     }
     if (user.password.length < 7) {
       return Notify.failure('Password should be at least 7 characters');
@@ -30,7 +30,7 @@ export const RegisterForm = () => {
         }
       })
       .catch(e => {
-        Notify.failure('Email or Password is incorrect');
+        Notify.failure(`${user.name} is already registered or incorrect Email`);
       });
     form.reset();
   };
