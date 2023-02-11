@@ -2,11 +2,11 @@ import { Button } from 'commonStyles/coommonStyles.styled';
 import { ContactWrap, Item, ItemName } from './ContactListItem.styled';
 import { FaPhoneAlt, FaUserAlt, FaTrash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import PropTypes from 'prop-types';
 // import { Box } from 'commonStyles/Box';
 
-const ContactListItem = ({ id, phone, name }) => {
+const ContactListItem = ({ id, number, name }) => {
   const dispatch = useDispatch();
 
   return (
@@ -16,7 +16,7 @@ const ContactListItem = ({ id, phone, name }) => {
           <FaUserAlt fill="orange" /> {name}:
         </ItemName>
         <span>
-          <FaPhoneAlt fill="orange" /> {phone}
+          <FaPhoneAlt fill="orange" /> {number}
         </span>
       </ContactWrap>
       <Button type="button" onClick={() => dispatch(deleteContact(id))}>
@@ -29,7 +29,7 @@ const ContactListItem = ({ id, phone, name }) => {
 ContactListItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };
 
 export default ContactListItem;
