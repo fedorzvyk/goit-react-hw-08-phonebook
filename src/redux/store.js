@@ -21,7 +21,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { authReducer } from './auth/slice.auth';
+import { authReducer } from './auth/auth.slice';
 
 // const rootReducer = combineReducers({
 //   contacts: contactsReducer,

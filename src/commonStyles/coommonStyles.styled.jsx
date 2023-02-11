@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Label = styled.label`
@@ -50,5 +51,25 @@ export const Button = styled.button`
     /* padding: ${p => p.theme.space[2]}px; */
     font-size: ${p => p.theme.fontSizes.xs};
     gap: 5px;
+  }
+`;
+
+export const Link = styled(NavLink)`
+  padding: ${p => p.theme.space[3]}px;
+  border-radius: ${p => p.theme.radii.normal};
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: transform 250ms linear, border-color 250ms linear,
+    color 250ms linear;
+  :focus,
+  :hover,
+  :focus-visible {
+    transform: scale(1.1);
+  }
+
+  &.active {
+    /* color: white; */
+    background-color: ${p => p.theme.colors.primary};
   }
 `;

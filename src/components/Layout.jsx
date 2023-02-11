@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Box } from 'commonStyles/Box';
 // import ContactsPage from 'pages/ContactsPage';
+// import { Box, Center, Image, Flex, Badge, Text } from '@chakra-ui/react';
 import { AppBar } from './AppBar/AppBar';
 
 export const Layout = () => {
@@ -16,15 +17,15 @@ export const Layout = () => {
       maxWidth="500px"
       my={5}
       mx="auto"
-      py={6}
+      pb={5}
       px={4}
       bg="muted"
       border="normal"
       borderRadius="normal"
-      as="main"
+      minHeight="90vh"
     >
       <AppBar />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={null}>
         <Outlet />
       </Suspense>
     </Box>

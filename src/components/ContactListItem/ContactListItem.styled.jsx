@@ -28,7 +28,5 @@ export const ContactWrap = styled.div`
   width: 100%;
   flex-direction: column;
   gap: ${p => p.theme.space[2]}px;
-  /* align-items: center; */
-  /* justify-content: space-between; */
   justify-content: space-between;
 `;

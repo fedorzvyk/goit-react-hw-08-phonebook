@@ -26,7 +26,7 @@ body {
   /* height: 100hV; */
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body:before {
     content: '';
 
@@ -44,7 +44,7 @@ body {
     bottom: 0;
     left: 0;
   }
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -66,4 +66,8 @@ ol {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
