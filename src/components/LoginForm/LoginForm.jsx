@@ -11,10 +11,16 @@ export const LoginForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
+    const user = {
+      email: form.elements.email.value,
+      password: form.elements.password.value,
+    };
+    if (user.password.length < 7) {
+      return Notify.failure('Password should be at least 7 characters');
+    }
     dispatch(
       logIn({
-        email: form.elements.email.value,
-        password: form.elements.password.value,
+        ...user,
       })
     )
       .then(data => {
