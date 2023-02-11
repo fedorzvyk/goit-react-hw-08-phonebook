@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Tiitle = styled.h1`
+export const About = styled.p`
   font-weight: 'normal';
   text-align: center;
 `;

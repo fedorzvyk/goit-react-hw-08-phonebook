@@ -1,5 +1,5 @@
 import { Box } from 'commonStyles/Box';
-import { Tiitle } from './Home.styled';
+import { About } from './Home.styled';
 
 export default function Home() {
   return (
@@ -9,10 +9,13 @@ export default function Home() {
       minHeight="100%"
       display="flex"
     >
-      <Tiitle>
-        Welcome to the Phonebook
-        <span role="img" aria-label="Greeting icon"></span>
-      </Tiitle>
+      <About>
+        Phonebook is a specialized application designed specifically for storing
+        and managing phone numbers, featuring a filter option that allows users
+        to easily find and retrieve specific contacts. It provides a convenient
+        and organized way to keep track of important contacts and their
+        associated phone numbers.
+      </About>
     </Box>
   );
 }

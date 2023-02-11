@@ -4,6 +4,7 @@ import { register } from 'redux/auth/auth.operations';
 // import css from './RegisterForm.module.css';
 import { Form } from './RegistrationForm.styled';
 import { Input, Label, Button } from 'commonStyles/coommonStyles.styled';
+import { Notify } from 'notiflix';
 export const RegisterForm = () => {
   const dispatch = useDispatch();
 
@@ -16,7 +17,15 @@ export const RegisterForm = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    );
+    )
+      .then(data => {
+        if (data.error) {
+          throw new Error('Email or Password is incorrect');
+        }
+      })
+      .catch(e => {
+        Notify.failure('Email or Password is incorrect');
+      });
     form.reset();
   };
 
