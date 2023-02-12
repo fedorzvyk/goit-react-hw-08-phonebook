@@ -6,7 +6,7 @@ export const AuthNav = () => {
   return (
     <Box display="flex" gridGap={4}>
       <Link to="/register">Register</Link>
-      <Link to="/login">Log In</Link>
+      <Link to="/login">LogIn</Link>
     </Box>
   );
 };
